@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 8px;
+  align-items: start;
+  padding: 10px;
+  min-height: 600px;
+  background-color: #c0c7ef;
+}

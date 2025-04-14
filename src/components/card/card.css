@@ -1,0 +1,42 @@
+.cards__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px #abb5bd;
+}
+
+.cards__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.cards__item_cloned {
+  background-color: rgb(212, 212, 212);
+  pointer-events: none;
+}
+
+.cards__text {
+  display: block;
+  max-width: calc(100% - 15px - 10px);
+}
+
+.cards__item_dragged {
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  cursor: grab;
+}
+
+.remove-btn {
+  flex: none;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../../img/form-x.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

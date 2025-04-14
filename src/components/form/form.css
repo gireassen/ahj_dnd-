@@ -1,0 +1,46 @@
+.form__textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  height: 70px;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  pointer-events: auto;
+  z-index: 1;
+  position: relative;
+}
+
+.form__textarea:focus {
+  outline: none; /* Убираем стандартный контур фокуса */
+  border: 2px solid #c0c7ef; /* Добавляем цвет границы при фокусе */
+  box-shadow: 0 0 5px rgba(192, 199, 239, 0.5); /* Добавляем тень при фокусе */
+}
+
+.form__add {
+  padding: 10px;
+  background-color: #c0c7ef;
+  border-radius: 7px;
+  color: #010b3c;
+}
+
+.form__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__close {
+  width: 25px;
+  height: 25px;
+  background-image: url("../../img/form-x.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.tooltip {
+  margin-bottom: 10px;
+
+  position: relative;
+  top: -5px;
+  color: #ff0000;
+}
