@@ -1,26 +1,25 @@
-image: Ubuntu2204 # образ для сборки
+image: Ubuntu2204  # образ для сборки
 
-stack: node 20 # окружение
+stack: node 20.11.0  # окружение
 
 branches:
   only:
-    - main # ветка git
+    - main  # ветка git
 
-cache: node_modules # кеширование
+cache: node_modules  # кеширование
 
 install:
-  - npm install # установка зависимостей
+  - yarn  # команда установки зависимостей
 
-build: off # отключение встроенной в appveyor системы сборки
+build: off  # отключаем встроенную в appveyor систему сборки
 
 build_script:
-  - npm run build # сборка проекта
+  - yarn build   # команда сборки
 
 test_script:
-  - npm run lint # скрипт тестирования
-  # - npm run test
+  - yarn lint  # скрипт тестирования
 
-deploy_script: # скрипт развёртывания
+deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com

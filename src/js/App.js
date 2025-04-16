@@ -1,33 +1,12 @@
-import Column from "../components/column/Column";
-import Container from "../components/container/Container";
-import Storage from "./Storage";
-import DragAndDrop from "./DragandDrop";
+import Trello from './trello';
 
-export default class App {
-  constructor() {
-    this.wrapper = document.querySelector(".wrapper");
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('#app');
 
-    this.container = new Container();
+  const trello = new Trello();
+  trello.bindToDOM(container);
+  trello.drawUI();
+  trello.addEventListeners();
 
-    this.columnTodo = new Column("todo", "todo");
-    this.columnProgress = new Column("in progress", "inprogress");
-    this.columnDone = new Column("done", "done");
-
-    this.dragAndDrop = new DragAndDrop();
-    this.storage = new Storage();
-  }
-
-  init() {
-    this.render();
-  }
-
-  render() {
-    this.wrapper.append(this.container.element);
-
-    const data = this.storage.formData;
-
-    this.columnTodo.render(".container", data);
-    this.columnProgress.render(".container", data);
-    this.columnDone.render(".container", data);
-  }
-}
+  // Template card title: 'Welcome to Trello!'
+});

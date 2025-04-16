@@ -1,0 +1,25 @@
+.trello-column,
+.trello-column__btn-add { border-radius: 0.25rem; }
+
+.trello-column {
+    background-color: #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.trello-column__header,
+.trello-column__body,
+.trello-column__footer { padding: 0.5rem; }
+
+.trello-column__title,
+.trello-column__btn-add { font-size: 1rem; line-height: 1; }
+
+.trello-column__body { overflow-y: auto; }
+
+.trello-column__body > * + * { margin-top: 0.5rem; }
+
+.trello-column__btn-add { display: block; width: 100%; padding: 0.5rem 1rem; cursor: pointer; }
+
+.trello-column__btn-add:hover { background-color: #d1d5db; }
+
+.trello-column__btn-add.hidden,
+.trello-column__form.hidden { display: none; }

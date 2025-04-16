@@ -1,0 +1,10 @@
+.trello {
+    width: 100vw;
+    height: 100vh;
+    padding: 1.25rem;
+    background-color: #0284c7;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.trello__board { height: 100%; }

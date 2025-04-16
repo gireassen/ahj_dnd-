@@ -1,59 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+@import "_normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "_trello.css";
+@import "_trello-board.css";
+@import "_trello-column.css";
+@import "_trello-card.css";
+@import "_trello-form.css";
 
-body {
-  padding: 70px;
-  background-color: #b1aeae;
-}
+::-webkit-scrollbar { width: 0.375rem; height: 0.375rem; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 0.25rem; }
 
-button,
-div {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button,
-input,
-textarea {
-  font-size: inherit;
-  color: inherit;
-  background-color: #fff;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
-input:focus,
-input:active,
-button:focus,
-button:active {
-  outline: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.wrapper {
-  max-width: 1200px; /* по макету - 832px */
-  margin: 0 auto;
-}
-
-.hidden {
-  display: none;
-}
-
-.visually-hidden {
-  position: fixed;
-  transform: scale(0);
-}
+body { font-family: "Roboto", sans-serif; }

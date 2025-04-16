@@ -1,0 +1,35 @@
+.trello-form__textarea,
+.trello-form__btn-submit,
+.trello-form__btn-reset { border-radius: 0.25rem; }
+
+.trello-form__textarea {
+    display: block;
+    width: 100%;
+    height: calc(60px + (0.5rem * 2));
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.trello-form__controls { display: flex; column-gap: 0.5rem; margin-top: 0.5rem; }
+
+.trello-form__btn-submit,
+.trello-form__btn-reset { cursor: pointer; }
+
+.trello-form__btn-submit {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #ffffff;
+    background-color: #22c55e;
+}
+
+.trello-form__btn-submit:hover { background-color: #16a34a; }
+
+.trello-form__btn-reset { width: 2rem; padding: 0.375rem; font-size: 1.25rem; line-height: 1; }
+
+.trello-form__btn-reset:hover { background-color: #d1d5db; }

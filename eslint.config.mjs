@@ -1,28 +1,10 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import jest from "eslint-plugin-jest";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import pluginStylistic from '@stylistic/eslint-plugin';
 
 export default [
-  {
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
-  },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  pluginStylistic.configs.customize({ indent: 2, quotes: 'single', semi: true, jsx: true }),
   pluginJs.configs.recommended,
-  eslintPluginPrettierRecommended,
-  {
-    rules: {
-      "no-unused-vars": "warn",
-    },
-  },
-  {
-    ignores: ["dist/*"],
-  },
-  {
-    files: ["**/*.test.js"],
-    ...jest.configs["flat/recommended"],
-    rules: {
-      ...jest.configs["flat/recommended"].rules,
-      "jest/prefer-expect-assertions": "off",
-    },
-  },
+  { ignores: ['dist/*', '.pnp.cjs', '.pnp.loader.mjs'] },
 ];

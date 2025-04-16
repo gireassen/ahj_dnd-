@@ -1,0 +1,39 @@
+.trello-card,
+.trello-card.darkened::after,
+.trello-card__btn-delete { border-radius: 0.25rem; }
+
+.trello-card,
+.trello-card__btn-delete { padding: 0.5rem; }
+
+.trello-card {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.trello-card.draggable,
+.trello-card.darkened::after,
+.trello-card__btn-delete { position: absolute; }
+
+.trello-card.draggable { transform: rotate(10deg); pointer-events: none; }
+
+.trello-card.darkened::after { content: ""; inset: 0; background-color: #d1d5db; }
+
+.trello-card__title { font-size: 1rem; font-weight: 400; line-height: 1; }
+
+.trello-card__btn-delete {
+    top: 0;
+    right: 0;
+    display: none;
+    width: 1.75rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.trello-card:hover > .trello-card__btn-delete { display: block; }
+
+.trello-card.darkened > .trello-card__btn-delete,
+.trello-card.draggable > .trello-card__btn-delete { display: none; }
+
+.trello-card__btn-delete:hover { background-color: #f3f4f6; }
